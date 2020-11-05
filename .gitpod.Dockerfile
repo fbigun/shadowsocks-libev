@@ -17,7 +17,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* && apt-get autoclean && apt-get -y autoremove
 
 # Installation of libsodium
-RUN export LIBSODIUM_VER=1.0.16\
+RUN export LIBSODIUM_VER=1.0.18\
     && wget https://download.libsodium.org/libsodium/releases/libsodium-$LIBSODIUM_VER.tar.gz \
     && tar xvf libsodium-$LIBSODIUM_VER.tar.gz \
     && pushd libsodium-$LIBSODIUM_VER \
