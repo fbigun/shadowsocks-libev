@@ -14,7 +14,7 @@ RUN apt-get update \
     && apt-get install --no-install-recommends -y \
         gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto \
         libev-dev libc-ares-dev automake libmbedtls-dev libsodium-dev \
-    && rm -rf /var/lib/apt/lists/* && apt-get autoclean && apt-get autoremove
+    && rm -rf /var/lib/apt/lists/* && apt-get autoclean && apt-get -y autoremove
 
 # Installation of libsodium
 RUN export LIBSODIUM_VER=1.0.16; wget https://download.libsodium.org/libsodium/releases/libsodium-$LIBSODIUM_VER.tar.gz; \
