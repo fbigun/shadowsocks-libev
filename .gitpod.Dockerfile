@@ -8,11 +8,11 @@ FROM gitpod/workspace-full
 
 # Installation of basic build dependencies
 ## Debian / Ubuntu
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
+RUN sudo apt-get update \
+    && sudo apt-get install --no-install-recommends -y \
         gettext build-essential autoconf libtool libpcre3-dev asciidoc xmlto \
         libev-dev libc-ares-dev automake libmbedtls-dev libsodium-dev \
-    && rm -rf /var/lib/apt/lists/* && apt-get autoclean && apt-get -y autoremove
+    && sudo rm -rf /var/lib/apt/lists/* && sudo apt-get autoclean && sudo apt-get -y autoremove
 
 # Installation of libsodium
 RUN export LIBSODIUM_VER=1.0.18\
