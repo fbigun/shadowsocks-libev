@@ -6,8 +6,6 @@ FROM gitpod/workspace-full
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-USER root
-
 # Installation of basic build dependencies
 ## Debian / Ubuntu
 RUN apt-get update \
